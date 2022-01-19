@@ -14,31 +14,30 @@
 `#include <list>`<br>
 
 Or simply use <br>
-`#inlclude<bits/stdc++.h>`
+`#include<bits/stdc++.h>`
+
+# VECTOR
 
 <details>
   <summary>VECTOR</summary>
   <p>
 
-## Vector
 
-```
-int main()
-{
+```C++
+
+int main() {
     vector<int> v;
+     // Insert values into vector
     v.push_back(2);
-    v.push_back(5);
-    v.push_back(5);
-    v.push_back(4);
-    v.push_back(1);
-    v.push_back(6);
-    v.push_back(3);
     v.push_back(7);
-    // Insert values
+   
     
-    for (auto i : v) // iterator in for loop
+    // print the vector
+    // iterator i in a for loop, this syntax cannot be used everywhere. 
+    for (auto i : v) 
         cout << i << " "; 
     cout << endl;
+    
     // binary search - to search if an element is present
     cout << "Check if 6 is present in vector ";
     cout << binary_search(v.begin(), v.end(), 6) << endl; // iterates from begin to end and finds 6, if present
@@ -62,49 +61,72 @@ int main()
     cout << "Earlier a=" << a << " and b=" << b << endl;
     swap(a, b);
     cout << "Now a=" << a << " and b=" << b << endl;
-
-    // reverse the container
-    cout << "Before reversing vector : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
     
     // calling the reverse function
     reverse(v.begin(), v.end());
-    cout << "After reversing vector : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
-
-    // rotate - it will rotate by provided position
-    cout << "Before rotating vector : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
   
     // calling the rotate function
     rotate(v.begin(), v.begin() + 1, v.end());
-    cout << "After rotating vector by 1 : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
-
+   
     // sorting the container
     // it is based on intro sort(quick sort + heap sort + insertion sort)
-    cout << "Before sorting vector : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
-    
-    // calling the rotate function
     sort(v.begin(), v.end());
-    cout << "After sorting vector  : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
-
     
+    return 0;
+    }
 ```
 
 </p>
+</details>
+
+<!-- END OF VECTOR -->
+
+# ARRAY
+
+<details>
+  <summary>ARRAY(click me)</summary>
+  <p>
+
+
+```C++
+    int main(){
+
+    // declaration
+    array<int, 4> a;
+
+    // assigning values
+    for (int i = 0; i < 4; i++)
+    cin >> a[i];
+    
+    // declaration and assigning value
+    array<int, 4> a = {1, 2, 3, 4};
+
+    // printing the array
+    for (int i = 0; i < 4; i++)
+        cout << a[i] << " ";
+    cout << endl;
+
+    // print the array using auto keyword
+    for (auto i : a)
+        cout<< i;
+    cout<<endl;
+
+    // finding the size of the array
+    cout << a.size() << endl;
+
+    // accessing any element at given potion
+    cout << a[3] << " " << a.at(3) << endl;
+
+    // checking if the array is empty
+    cout << "Is array empty ? " << a.empty() << endl;
+
+    // excessing first and last element
+    cout << a.front() << " " << a.back() << endl;
+    
+    return 0;
+    }
+
+```
+
+  </p>
 </details>
