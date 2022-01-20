@@ -28,11 +28,47 @@ Or simply use <br>
 
 int main() {
     vector<int> v;
-     // Insert values into vector
+    // A is a vector having 'n' elements with all being zeros. 
+    
+    // Insert values into vector
     v.push_back(2);
     v.push_back(7);
    
+	vector <int> vec = {2,3,11,55, 100,100,100,100, 123}
+	// to find the first element >= to 100 in a vector, O(logN)
+	  
+	vector<int>::iterator it = lower_bound(A.begin(), A.end(), 100);
+	auto it = lower_bound(A.begin(), A.end(), 100);
+	// both the above lines are same
+	  
+	it2 = upper_bound(A.begin(), A.end(), 100); //first the element strictly > 100 //123
+	sort(v.begin(), v.end(), f); // here f is a comparator function. Refer LIST section for more on comparator. 
+	  
+	for(auto x: A){
+	  x--; 
+	  cout<< x <<" ";
+	} 
+	//wont work here, cant change the value, if you want to change value and also iterate, use int &x not x.
+    // not using &x does change value but not of original vector, just for this printing purpose only.
     
+	int n;
+    cin >> n;
+    vector<int> B(n, 0);
+    for (int i = 0; i < n; i++)
+        cin >> A[i];
+
+    vector<int> vec(5, 100);
+    // initialize with 5 element, each 100. // 100, 100, 100, 100, 100
+    
+	  
+   vector <int> v =  {1, 2, 3, 4, 5};
+   auto it = v.end() 
+   // does not point to last element of array i.e 5, but address after '5' 
+   // v.rend() - points to address before '1' 
+   // rbegin() - reverseBegin, points to 5 
+   // cbegin() OR cend() - if you do not want to change iterator, 'c' - constatnt 
+   // v.back() - to get the last element, even if you do not know the size
+	  
     // print the vector
     // iterator i in a for loop, this syntax cannot be used everywhere. 
     for (auto i : v) 
@@ -71,6 +107,7 @@ int main() {
    
     // sorting the container
     // it is based on intro sort(quick sort + heap sort + insertion sort)
+    //O(NlogN), else use merge sort
     sort(v.begin(), v.end());
     
     return 0;
