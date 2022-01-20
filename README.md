@@ -1069,6 +1069,9 @@ int32_t main()
 
     // MULTIMAP
     // same as map, but can store duplicate values as well, sorted.
+    //[] Operator cannot be used to insert values.
+    //count() returns the number of times the key has appeared unlike map where count() returns either 0 or 1.
+	  
 
     // UNORDERED MAP
     // does not store in sorted manner, takes O(1), collision might happen
