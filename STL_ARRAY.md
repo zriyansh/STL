@@ -1,3 +1,4 @@
+```C++
 // array using stl function can do much more task and have a good library support
 #include <iostream>
 #include <array>
