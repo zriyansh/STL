@@ -1200,7 +1200,29 @@ int32_t main()
   </p>
 </details>	  
     
-    
+
+	  
+
+## Header files
+`#include <iostream>`<br>
+`#include <algorithm>`<br>
+`#include <array>`<br>
+`#include <vector>`<br>
+`#include <set>`<br>
+`#include <stack>`<br>
+`#include <queue>`<br>
+`#include <deque>`<br>
+`#include <map>`<br>
+`#include <unordered_map>`<br>
+`#include <list>`<br>
+
+Or simply use <br>
+`#include<bits/stdc++.h>`
+
+
+	  
+	  
+	  
 Further reading
 	  
 - https://www.hackerearth.com/practice/notes/standard-template-library/
