@@ -560,26 +560,23 @@ void set_func()
     // content in '()' need not be element, it can be any number we want to compare.
     // if not bound is found, iterartor returns S.end();
 
-    S.erase(1);
-    // in logN time.
-    // Set is more powerful than vectors
-
-
-    s.count(9);
+    S.count(9);
     // "count" function returns bool value in O(log n) time
 
-    // Set is more powerful than vectors
-
     int cnt = S.count(1); 
-    //Counts occurance, 1 if present else 0.
+    // Counts occurance, 1 if present else 0.
 
     S.clear(); // deletes everything
     auto it = st.find(3);
     
-    st.erase(it);
+    S.erase(1);
+    // in logN time.
+    // Set is more powerful than vectors
+    
+    S.erase(it);
     // in constant time
     
-    st.erase(it1, it2) 
+    S.erase(it1, it2) 
     // deletes in range from [it1, it2), last one is excluded
 }
 
