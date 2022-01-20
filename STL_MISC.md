@@ -1,3 +1,4 @@
+```C++
 #include <iostream>
 
 bool comp(pair<int, int> p1, pair<int, int> p2)
