@@ -25,6 +25,8 @@ Or simply use <br>
 
 
 ```C++
+
+
 using namespace std;
 
 bool f(int x, int y)
@@ -33,8 +35,17 @@ bool f(int x, int y)
 }
 // comparator funtion, used to sort in descreasing order if returns x>y.
 
-int main()
-{
+int32_t main(){
+	// We use int32_t for faster compilation and also because main() should always return value 
+	// accoring to 32bit system, even 64bit system use 32bit int. 	  
+
+	ios_base::sync_with_stdio(0); 
+	// it turns off buffer synchronization between the cin stream and C-style stdio tools (like scanf or gets), 
+	// so cin works faster, but you can't use it simultaneously with stdio tools.
+	  
+	cin.tie(NULL);
+	// This line unties cin from cout — by default the cout buffer flushes each time when you read something from cin.
+	  
     vector<int> v;
     // v is a vector having 'n' elements with all being zeros.
 
