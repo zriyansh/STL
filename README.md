@@ -414,8 +414,223 @@ int main(){
   </p>
 </details>
 
+# STACK
+
+<details>
+  <summary>STACK</summary>
+  <p>
+
+
+```C++
+
+
+// Integer Stack
+void stack_int()
+{
+    stack<int> st;
+    st.push(1);    // 1
+    st.push(2);    // 2, 1
+    st.push(3);    // 3, 2, 1
+    st.push(3);    // 3, 3, 2, 1
+    st.emplace(5); // 5, 3,3,2,1
+
+    cout << st.top(); // cant use st[2] notation, 5
+
+    st.pop(); // 5
+
+    cout << st.top();           // 3
+    cout << st.size();          // 4
+    cout << st.empty() << endl; // empty or not
+
+    stack<int> st1, st2;
+    st1.swap(st2);
+}
+
+// String Stack
+void stack_string()
+{
+    stack<string> st;
+
+    // assigning value
+    st.push("abc");
+    st.push("xyz");
+    st.push("pqr");
+
+    // printing our stack
+    cout << "top element is " << st.top() << endl;
+
+    // size of stack
+    cout << "size of stack is " << st.size() << endl;
+
+    // stack is empty or not
+    cout << "Is the stack empty?" << st.empty() << endl;
+
+    // removing the top element
+    st.pop();
+    cout << "Now the top is " << st.top() << endl;
+
+    // printing the complete stack
+    // inserting new elements
+    st.push("Computer");
+    st.push("Science");
+    st.push("Engineering");
+    int n = st.size();
+    cout << "The complete stack is ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << st.top() << " ";
+        st.pop();
+    }
+    cout << endl;
+}
+
+int main()
+{
+    stack_string();
+
+    // stack doesnt allow access to anything other than top.
+    // doesnot have iterators or begin or end. Just these functions.
+}
+
+
+```
+
+
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#stl)
+  </p>
+</details>
+
     
+# SET
+
+<details>
+  <summary>SET</summary>
+  <p>
+
+
+```C++
+
+
+//  Using SET, we have unarranged list, and we want to do operations on it.
+//  In set, only unique elements are stored
+//  Implemented using BST
+//  Modification of elements is allowed
+//  Stores element in sorted order
+//  in a vector<vector>int> > matrix, matrix.size() gives size of row only.
+
+using namespace std;
+
+void set_func()
+{
+    set<int> S;
+    S.insert(5);
+    S.insert(1);
+    S.insert(1); // duplicates are not stored, ignores it.
+    S.insert(2); // 1,2,5 [Set automatically arranges itself]
+    // automatically sorted in ascending order in logN time. You cannot insert element at your wished place.
+
+    // Print
+    for (auto x : S)
+        cout << x << " "; // can use 'int' in place of auto.
+    cout << endl;
+
+    // printing the set, second way
+    set<int, greater<int>>::iterator itr;
+    for (itr = s.begin(); itr != s.end(); itr++)
+        cout << *itr << " ";
+    cout << endl;
+    // to save time from sorting the elements, we use set, which internally sorts the elements for us.
+    // as general sorting is NlogN, takes time.
+
+    auto it = S.find(2);
+    // now 'it' points to ele 2, if 2 is not present, it will point to S.end()
+    if (it == S.end())
+        cout << "Element not present " << endl;
+    // and it has value NULL, 0.
+    else
+        cout << "Element present is " << *it << endl;
+
+    auto it2 = S.lower_bound(1);
+    // gives iterartor to the first ele >= to number present in ()
+    // as Set is already sorted, we dont have to A.begin(), A.end()
+    cout << *it2 << endl;
+
+    auto it3 = S.upper_bound(1); // stricly first '>' ele after 1
+    cout << *it3 << endl;
+    // content in '()' need not be element, it can be any number we want to compare.
+    // if not bound is found, iterartor returns S.end();
+
+    S.erase(1);
+    // in logN time.
+    // Set is more powerful than vectors
+
+
+    s.count(9);
+    // "count" function returns bool value in O(log n) time
+
+    // Set is more powerful than vectors
+
+    int cnt = S.count(1); 
+    //Counts occurance, 1 if present else 0.
+
+    S.clear(); // deletes everything
+    auto it = st.find(3);
     
+    st.erase(it);
+    // in constant time
+    
+    st.erase(it1, it2) 
+    // deletes in range from [it1, it2), last one is excluded
+}
+
+void unordered_set()
+{
+    // Implemented using BST
+    // Modification of elements is allowed
+    // declaration
+    unordered_set<int> ust;
+
+    // inserting elements takes O(1) time
+    ust.insert(1);
+    ust.insert(7);
+    ust.insert(8);
+    ust.insert(2);
+    ust.insert(5);
+
+    // printing the set
+    unordered_set<int>::iterator itr;
+    for (itr = ust.begin(); itr != ust.end(); itr++)
+    {
+        cout << *itr << " ";
+    }
+    cout << endl;
+
+    // finding any elements require O(1)
+    // "find" function returns the iterator in O(1)
+    cout << "Print 5 if present ";
+    cout << *ust.find(5) << endl;
+    // "count" function returns bool value in O(1) time
+    cout << "Is 9 present in the set? " << ust.count(9) << endl;
+
+    // deleting all elements in the set
+    cout << "Is the set empty? " << ust.empty() << endl;
+    ust.clear();
+    cout << "Is the set empty now? " << ust.empty() << endl;
+}
+
+int32_t main()
+{
+    // unordered_set();
+    set_func();
+    return 0;
+}
+
+```
+
+
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#stl)
+  </p>
+</details>	  
     
     
     
