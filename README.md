@@ -20,7 +20,7 @@ Or simply use <br>
 # VECTOR
 
 <details>
-  <summary>VECTOR</summary>
+  <summary>VECTOR (click here)</summary>
   <p>
 
 
@@ -258,7 +258,7 @@ int32_t main(){
 # ARRAY
 
 <details>
-  <summary>ARRAY(click me)</summary>
+  <summary>ARRAY</summary>
   <p>
 
 
