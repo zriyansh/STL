@@ -1,21 +1,7 @@
 ## STL
 (under active building)
 
-## Header files
-`#include <iostream>`<br>
-`#include <algorithm>`<br>
-`#include <array>`<br>
-`#include <vector>`<br>
-`#include <set>`<br>
-`#include <stack>`<br>
-`#include <queue>`<br>
-`#include <deque>`<br>
-`#include <map>`<br>
-`#include <unordered_map>`<br>
-`#include <list>`<br>
-
-Or simply use <br>
-`#include<bits/stdc++.h>`
+Standard Template Library found in C++.
 
 # VECTOR
 
@@ -629,6 +615,64 @@ int32_t main()
   </p>
 </details>	  
     
+	  
+	  
+# MULTISET
+
+<details>
+  <summary>MULTISET</summary>
+  <p>
+
+
+```C++
+using namespace std;
+
+int main()
+{
+    multiset<int> ms;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+
+    int cnt = ms.count(1);
+
+    ms.erase(1); // eases all 1's
+
+    for (auto x : ms)
+        cout << x << endl;
+    cout << cnt;
+
+    ms.insert(1);
+    ms.erase(ms.find(1)); // only a single 1 is erased that it finds first
+
+    ms.erase(ms.find(1), ms.find(1) + 2); // move iterator in a range to delete 1's.
+
+    // rest same as set, only it stores duplicate element too.
+    // lower_bound, upper_bound also available.
+    // stores in sorted way
+
+    // UNORDERED SET
+    unordered_set<int> us;
+    // upper_bound and lowe_bound do not work, rest same.
+    //  collisions may happen, so you get wrong answers but else its faster.
+    //  does not store in sorted way.
+    //  O(1) avg case.
+}
+
+
+```
+
+
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#stl)
+  </p>
+</details>	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     
 # QUEUE
 
