@@ -3,7 +3,7 @@
 
 What is C++ STL? <br>
 Standard Template Library found in C++.
-No, STL is your best friend (okay 2nd best) that helps you unconditionally especially while you are solving questions on LeetCode of during contests. 
+No, STL is your best friend (okay 2nd best) that helps you unconditionally especially while you are solving questions on LeetCode or during contests. 
 
 # VECTOR
 
