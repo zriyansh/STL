@@ -1,11 +1,11 @@
 ## STL
-(under active building)
 
 What is C++ STL? <br>
 Standard Template Library found in C++.
 No, STL is your best friend (okay 2nd best) that helps you unconditionally especially while you are solving questions on LeetCode or during contests. 
 
-# VECTOR
+
+### VECTOR
 
 <details>
   <summary>VECTOR (click here)</summary>
@@ -243,7 +243,7 @@ int32_t main(){
 
 <!-- END OF VECTOR -->
 
-# ARRAY
+### ARRAY
 
 <details>
   <summary>ARRAY</summary>
@@ -297,7 +297,7 @@ int32_t main(){
     
     
     
- # LIST
+ ### LIST
 
 <details>
   <summary>LIST</summary>
@@ -402,7 +402,7 @@ int main(){
   </p>
 </details>
 
-# STACK
+### STACK
 
 <details>
   <summary>STACK</summary>
@@ -489,7 +489,7 @@ int main()
 </details>
 
     
-# SET
+### SET
 
 <details>
   <summary>SET</summary>
@@ -619,7 +619,7 @@ int32_t main()
     
 	  
 	  
-# MULTISET
+### MULTISET
 
 <details>
   <summary>MULTISET</summary>
@@ -676,7 +676,7 @@ int main()
 	  
 	  
     
-# QUEUE
+### QUEUE
 
 <details>
   <summary>QUEUE</summary>
@@ -779,7 +779,7 @@ int main()
 </details>
 
     
-# DEQUE
+### DEQUE
 
 <details>
   <summary>DEQUE</summary>
@@ -848,7 +848,7 @@ int main()
 </details>    
     
     
-# PAIR
+### PAIR
 
 <details>
   <summary>PAIR</summary>
@@ -933,7 +933,7 @@ int main()
 </details>
     
     
-# MAP
+### MAP
 
 <details>
   <summary>MAP</summary>
@@ -1091,7 +1091,7 @@ int32_t main()
     
 
 	  
-# MISC
+### MISC
 
 <details>
   <summary>MISC</summary>
@@ -1201,6 +1201,41 @@ int32_t main()
 </details>	  
     
 
+
+# Internal Implementation of C++ STL — Standard Template Library.
+
+
+[STL] | [INTERNAL IMPLEMENTATION DATA STRUCTURE]
+
+
+for e.g — 'set' STL, has its internal implementation(what it’s coded with) using a Red-Black Tree.
+
+- **stack** — Array, List, Deque.
+- **vector** — Dynamic Array
+- **list** — Dynamic Array and Doubly Linked List
+- **pair** — defined in <utility> header file
+  
+  <br>
+  
+- **queue** — Array, List
+- **deque** — Dynamic Array
+- **priority_queue** — Heap
+
+  <br>
+  
+- **set** — Red-Black Tree
+- **multiset** — Binary Search Tree
+- **unordered set** — Hash Table
+
+  <br>
+  
+- **map** — Red Black Self-Balancing BST, Hash Table,
+- **multimap** — Red Black Tree
+- **unordered map**(4x faster than the map) — Hash Table
+
+- **sort()** — uses IntroSort(a hybrid of Quicksort, Heapsort, and Insertion Sort), Faster than qsort().
+
+	 
 	  
 
 ## Header files
