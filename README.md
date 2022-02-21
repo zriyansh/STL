@@ -517,6 +517,9 @@ void set_func()
     S.insert(2); // 1,2,5 [Set automatically arranges itself]
     // automatically sorted in ascending order in logN time. You cannot insert element at your wished place.
 
+    // size of set
+    S.size();
+	  
     // Print
     for (auto x : S)
         cout << x << " "; // can use 'int' in place of auto.
