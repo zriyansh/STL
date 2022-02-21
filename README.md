@@ -520,6 +520,14 @@ void set_func()
     // size of set
     S.size();
 	  
+    // access last element of the set
+    auto it = cows.end();
+    it--;
+    
+    // largest element of a set
+    auto max = *cows.rbegin();
+    cout<<max;
+	  
     // Print
     for (auto x : S)
         cout << x << " "; // can use 'int' in place of auto.
