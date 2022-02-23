@@ -132,6 +132,11 @@ int32_t main(){
     sort(v.begin(), v.end(), f);
     // here f is a comparator function. Refer LIST section for more on comparator.
 
+	  
+	  // sum of vector elements, where 'a' is the vector and '0' is the initial sum value
+	  accumulate(a.begin(), a.end(), 0);
+
+	  
     // CONVERT ARRAY TO VECTOR
     int arr[] = {2, 46, 15, 63, 5, 96};
     int size = sizeof(arr) / sizeof(arr[0]);
